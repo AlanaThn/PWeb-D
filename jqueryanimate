@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>JQuery Animate</title>
+    <style>
+        button {
+            width: 100%;
+  background-color: #000000;
+  border: black;
+  color: white;
+  padding: px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("#red").animate({ height: "500px" });
+            });
+            $("#btn2").click(function () {
+                $("#red").animate({ height: "100px" });
+            });
+        });
+
+        $(document).ready(function () {
+            $("#btn3").click(function () {
+                $("#blue").animate({ width: "500px" });
+            });
+            $("#btn4").click(function () {
+                $("#blue").animate({ width: "100px" });
+            });
+        });
+
+        $(document).ready(function () {
+            $("#btn5").click(function () {
+                $("#aqua").fadeOut({ height: "0px" });
+            });
+            $("#btn6").click(function () {
+                $("#aqua").fadeIn({ height: "100px" });
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class="mx-auto" style="width: 500px;">
+        <div class="container">
+            <div class="row">
+
+                <button id="btn1">Red becomes longer</button>
+                <br>
+                <br>
+                <button id="btn2">Reset red box</button>
+                <br><br>
+                <button id="btn3">Blue becomes wider</button>
+                <br><br>
+                <button id="btn4">Reset blue box</button>
+                <br><br>
+                <button id="btn5">Aqua yeets</button>
+                <br><br>
+                <button id="btn6">Reset aqua box</button>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <div id="red" style="background:#bf2121;height:100px;width:100px;margin:6px;"></div>
+                    <br>
+                    <div id="blue" style="background:#2124bf;height:100px;width:100px;margin:6px;"></div>
+
+                    <br>
+                    <div id="aqua" style="background-color: aqua;height: 100px;width:100px;margin:6px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
